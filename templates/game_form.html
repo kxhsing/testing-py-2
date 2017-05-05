@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Fun!{% endblock %}
+
+{% block content %}
+
+  <h2>Games</h2>
+    <form action="add-game" method="POST">Name of the game: 
+      <input type="text" name="name"><br>Description of the game: 
+      <input type="text" name="description"><br>
+      <input type="submit">
+
+{% endblock %}

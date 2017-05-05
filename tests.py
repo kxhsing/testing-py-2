@@ -46,6 +46,10 @@ class PartyTestsDatabase(unittest.TestCase):
         db.create_all()
         example_data()
 
+        with self.client as c:
+            with c.session_transaction() as sess:
+                sess['RSVP'] = True
+
     def tearDown(self):
         """Do at end of every test."""
 
